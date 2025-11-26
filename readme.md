@@ -23,7 +23,7 @@ The solution is comprised of three main Java classes and two frontend files:
 
 | Class | Type | Description |
 | :--- | :--- | :--- |
-| `NoticiasCollectionProvider.java` | **InfoCollectionProvider** | This is the main entry point. It handles the core logic: **Renamed to reflect news content.** It registers the custom filter, and its internal method (`_getDateBooleanClause`) calculates the dynamic date range based on the `periodKey` received. It specifically targets the `Field.CREATE_DATE` (or `Field.MODIFIED_DATE`) of `JournalArticle` assets. |
+| `NoticiasCollectionProvider.java` | **InfoCollectionProvider** | This is the main entry point. It handles the core logic: It registers the custom filter, and its internal method (`_getDateBooleanClause`) calculates the dynamic date range based on the `periodKey` received. It specifically targets the `Field.CREATE_DATE` (or `Field.MODIFIED_DATE`) of `JournalArticle` assets. |
 | `DateInfoFilter.java` | **InfoFilter** | Defines the data structure for the filter value. It holds the selected period key as a **String** (`_periodKey`)—e.g., `"lastYear"`—after removing the methods related to the deprecated `java.util.Date` object. |
 | `DateInfoFilterProvider.java` | **InfoFilterProvider** | Handles the marshaling/unmarshaling of the filter value. It reads the raw **String value** (the period key) sent by the frontend and sets it on the `DateInfoFilter` object using the `setPeriodKey(String)` method. |
 
