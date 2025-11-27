@@ -21,16 +21,16 @@ export default function DateFilter({
 	const handleChange = () => {
         // Enviar la clave del periodo directamente
 		setCollectionFilterValue(
-			'date', // Clave del filtro (debe coincidir con la usada por DateInfoFilter)
+			'period', // Clave del filtro (debe coincidir con la usada por DateInfoFilter)
 			fragmentEntryLinkId,
 			datePeriodSelect.value // Envía 'lastMonth', 'last3Months', etc.
 		);
 	};
 
     // Al cargar la página, intentar restaurar el valor de la URL
-	const urlValue = getCollectionFilterValue('date', fragmentEntryLinkId);
+	const urlValue = getCollectionFilterValue('period', fragmentEntryLinkId);
     // Solo restauramos si el valor de la URL es una de nuestras claves de período
-    if (['lastMonth', 'last3Months', 'lastYear'].includes(urlValue)) {
+    if (['lastDay', 'lastMonth', 'last3Months', 'lastYear'].includes(urlValue)) {
         datePeriodSelect.value = urlValue;
     } else {
         datePeriodSelect.value = '';

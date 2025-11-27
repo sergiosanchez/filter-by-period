@@ -148,7 +148,7 @@ public class NoticiasCollectionProvider
 		searchContext.setEnd(pagination.getEnd());
 
 		searchContext.setEntryClassNames(
-			new String[] {DLFileEntryConstants.getClassName()});
+			new String[] {JournalArticle.class.getName()});
 		searchContext.setGroupIds(
 			new long[] {serviceContext.getScopeGroupId()});
 
@@ -195,6 +195,9 @@ public class NoticiasCollectionProvider
 	    
 	    // Calcular la fecha de inicio
 	    switch (periodKey) {
+	    	case "lastDay":
+	    		calendar.add(Calendar.DAY_OF_YEAR, -1);
+	    		break;
 	        case "lastMonth":
 	            calendar.add(Calendar.MONTH, -1);
 	            break;

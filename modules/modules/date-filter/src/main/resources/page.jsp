@@ -16,6 +16,7 @@ String fragmentEntryLinkNamespace = fragmentEntryLink.getNamespace() + fragmentE
 		<%-- Nuevo Combobox --%>
 		<select name="datePeriod">
 			<option value=""><%= LanguageUtil.get(request, "all-dates") %></option>
+			<option value="lastDay"><%= LanguageUtil.get(request, "last-day") %></option>
 			<option value="lastMonth"><%= LanguageUtil.get(request, "last-month") %></option>
 			<option value="last3Months"><%= LanguageUtil.get(request, "last-3-months") %></option>
 			<option value="lastYear"><%= LanguageUtil.get(request, "last-year") %></option>
