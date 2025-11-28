@@ -165,6 +165,7 @@ public class NoticiasCollectionProvider
 		}
 		else {
 			searchContext.setSorts(
+				//TODO A verificar si esta es la fecha que necesitan
 				new com.liferay.portal.kernel.search.Sort(
 					Field.MODIFIED_DATE,
 					com.liferay.portal.kernel.search.Sort.LONG_TYPE, true));
